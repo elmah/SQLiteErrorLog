@@ -27,6 +27,7 @@ namespace Elmah
     using System.IO;
     using System.Runtime.CompilerServices;
     using IDictionary = System.Collections.IDictionary;
+    using Debug = System.Diagnostics.Debug;
 
     #endregion
 
@@ -120,7 +121,7 @@ namespace Elmah
 
         public static string GetDataSourceFilePath(string connectionString)
         {
-            Debug.AssertStringNotEmpty(connectionString);
+            Debug.Assert(!string.IsNullOrEmpty(connectionString));
 
             var builder = new DbConnectionStringBuilder();
             return GetDataSourceFilePath(builder, connectionString);
@@ -145,7 +146,7 @@ namespace Elmah
 
         public static string GetResolvedConnectionString(string connectionString)
         {
-            Debug.AssertStringNotEmpty(connectionString);
+            Debug.Assert(!string.IsNullOrEmpty(connectionString));
 
             var builder = new DbConnectionStringBuilder();
             builder["Data Source"] = GetDataSourceFilePath(builder, connectionString);

@@ -36,6 +36,7 @@ namespace Elmah
     using System.IO;
 
     using IDictionary = System.Collections.IDictionary;
+    using Debug = System.Diagnostics.Debug;
 
     #endregion
 
@@ -96,7 +97,7 @@ namespace Elmah
         private void InitializeDatabase()
         {
             var connectionString = ConnectionString;
-            Debug.AssertStringNotEmpty(connectionString);
+            Debug.Assert(!string.IsNullOrEmpty(connectionString));
 
             var dbFilePath = ConnectionStringHelper.GetDataSourceFilePath(connectionString);
 
