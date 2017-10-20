@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>elmah.sqlite</id>
+    <version>2.0.0$VersionSuffix$</version>
+    <title>ELMAH on SQLite</title>
+    <authors>Simone Busoli</authors>
+    <owners>Simone Busoli, Atif Aziz, James Driscoll</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/elmah/SQLiteErrorLog</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ELMAH error log implementation on top of an SQLite database.</description>
+    <language>en-US</language>
+    <tags>sqlite elmah error logging unhandled exception</tags>
+    <dependencies>
+      <dependency id="elmah.corelibrary" version="2.0.0-alpha001" />
+      <dependency id="System.Data.SQLite" version="[1.0.89.0]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Elmah.SQLite.*" target="lib\net35" />
+    <file src="src\*.cs" target="src" />
+  </files>
+</package>
