@@ -21,8 +21,6 @@
 //
 #endregion
 
-[assembly: Elmah.Scc("$Id: SQLiteErrorLog.cs 924 2011-12-23 22:41:47Z azizatif $")]
-
 namespace Elmah.SQLite
 {
 
