@@ -239,8 +239,8 @@ namespace Elmah.SQLite
             {
                 var parameters = command.Parameters;
 
-                parameters.Add("@PageIndex", DbType.Int16).Value = pageIndex;
-                parameters.Add("@PageSize", DbType.Int16).Value = pageSize;
+                parameters.Add("@PageIndex", DbType.Int32).Value = pageIndex;
+                parameters.Add("@PageSize", DbType.Int32).Value = pageSize;
 
                 connection.Open();
 
